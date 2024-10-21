@@ -4,7 +4,7 @@ import (
 	"context"
 	"strconv"
 
-	"github.com/anqa-ag/go-aptos/types"
+	"github.com/kitelabs-io/go-aptos/types"
 )
 
 var (

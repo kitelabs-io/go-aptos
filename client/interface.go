@@ -3,7 +3,7 @@ package client
 import (
 	"context"
 
-	"github.com/anqa-ag/go-aptos/types"
+	"github.com/kitelabs-io/go-aptos/types"
 )
 
 type IClient interface {
