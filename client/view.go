@@ -10,7 +10,11 @@ var (
 	pathView = "/view"
 )
 
-func (c *Client) View(ctx context.Context, bodyParams ViewBodyParams, queryParams ViewQueryParams) ([]any, *Metadata, error) {
+func (c *Client) View(
+	ctx context.Context,
+	bodyParams ViewBodyParams,
+	queryParams ViewQueryParams,
+) ([]any, *Metadata, error) {
 	body, err := json.Marshal(bodyParams)
 	if err != nil {
 		return nil, nil, err
