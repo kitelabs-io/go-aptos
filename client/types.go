@@ -17,7 +17,7 @@ type ViewQueryParams struct {
 type ViewBodyParams struct {
 	Function      string   `json:"function"`
 	TypeArguments []string `json:"type_arguments"`
-	Arguments     []string `json:"arguments"`
+	Arguments     []any    `json:"arguments"`
 }
 
 type ErrorResponse struct {

@@ -35,7 +35,7 @@ func (c *client) GetPairedFA(ctx context.Context, coinType string) (string, erro
 		node.ViewBodyParams{
 			Function:      c.getCoinModuleFunction("paired_metadata"),
 			TypeArguments: []string{coinType},
-			Arguments:     []string{},
+			Arguments:     []any{},
 		},
 		node.ViewQueryParams{},
 	)
@@ -64,7 +64,7 @@ func (c *client) GetPairedCoin(ctx context.Context, faAddress string) (string, e
 		node.ViewBodyParams{
 			Function:      c.getCoinModuleFunction("paired_coin"),
 			TypeArguments: []string{},
-			Arguments:     []string{faAddress},
+			Arguments:     []any{faAddress},
 		},
 		node.ViewQueryParams{},
 	)
