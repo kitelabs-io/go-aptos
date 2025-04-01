@@ -7,6 +7,8 @@ import (
 )
 
 type IClient interface {
+	GetNodeInfo(ctx context.Context) (*NodeInfo, error)
+
 	GetAccountResources(
 		ctx context.Context,
 		address string,
