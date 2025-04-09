@@ -20,7 +20,7 @@ func (c *Client) GetAccountResources(
 	req := c.client.R().SetContext(ctx).SetPathParam("address", address)
 
 	if queryParams.LedgerVersion > 0 {
-		req.SetQueryParam("ledger_version", strconv.FormatUint(queryParams.LedgerVersion, 64))
+		req.SetQueryParam("ledger_version", strconv.FormatUint(queryParams.LedgerVersion, 10))
 	}
 
 	if queryParams.Limit > 0 {
@@ -57,7 +57,7 @@ func (c *Client) GetAccountResource(
 		SetPathParam("resource_type", resourceType)
 
 	if queryParams.LedgerVersion > 0 {
-		req.SetQueryParam("ledger_version", strconv.FormatUint(queryParams.LedgerVersion, 64))
+		req.SetQueryParam("ledger_version", strconv.FormatUint(queryParams.LedgerVersion, 10))
 	}
 
 	var resource types.Resource
