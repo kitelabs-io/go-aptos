@@ -25,7 +25,7 @@ func (c *Client) View(
 		SetBody(body)
 
 	if queryParams.LedgerVersion > 0 {
-		req.SetQueryParam("ledger_version", strconv.FormatUint(queryParams.LedgerVersion, 64))
+		req.SetQueryParam("ledger_version", strconv.FormatUint(queryParams.LedgerVersion, 10))
 	}
 
 	var results []any
