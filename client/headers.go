@@ -32,9 +32,9 @@ func handleRspHdr(headers http.Header) *Metadata {
 		case hdrXAptosLedgerTimestampUSec:
 			metadata.LedgerTimestampUSec, _ = strconv.Atoi(values[0])
 		case hdrXAptosLedgerVersion:
-			metadata.LedgerTimestampUSec, _ = strconv.Atoi(values[0])
+			metadata.LedgerVersion, _ = strconv.Atoi(values[0])
 		case hdrXAptosOldestBlockHeight:
-			metadata.LedgerTimestampUSec, _ = strconv.Atoi(values[0])
+			metadata.OldestBlockHeight, _ = strconv.Atoi(values[0])
 		case hdrXAptosCursor:
 			metadata.Cursor = values[0]
 		}
