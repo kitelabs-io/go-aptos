@@ -22,6 +22,8 @@ func (ts *ClientTestSuite) TestView() {
 
 		ts.Assert().NoError(err)
 		ts.Assert().NotNil(metadata)
+		ts.Assert().Greater(metadata.BlockHeight, 0)
+		ts.Assert().Greater(metadata.LedgerVersion, 0)
 		ts.Assert().NotNil(results)
 
 		result0, ok := results[0].([]any)
